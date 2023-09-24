@@ -25,28 +25,35 @@ dog_headers = {
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    current_page = 'index'
+    return render_template('index.html', current_page=current_page)
 
 
 @app.route('/shiba')
 def shiba():
+    current_page = 'shiba'
     shiba_response = requests.get(url=shiba_url).json()[0]
     shiba_image = f'https://cdn.shibe.online/shibes/{shiba_response}.jpg'
-    return render_template('shiba.html', shiba_image=shiba_image)
+    return render_template('shiba.html', current_page=current_page,
+                           shiba_image=shiba_image)
 
 
 @app.route('/cat')
 def cat():
+    current_page = 'cat'
     cat_response = requests.get(cat_url, headers=cat_headers).json()
     cat_image = cat_response[0]['url']
-    return render_template('cat.html', cat_image=cat_image)
+    return render_template('cat.html', current_page=current_page,
+                           cat_image=cat_image)
 
 
 @app.route('/dog')
 def dog():
+    current_page = 'dog'
     dog_response = requests.get(dog_url, headers=dog_headers).json()
     dog_image = dog_response[0]['url']
-    return render_template('dog.html', dog_image=dog_image)
+    return render_template('dog.html', current_page=current_page,
+                           dog_image=dog_image)
 
 
 if __name__ == '__main__':

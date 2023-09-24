@@ -21,11 +21,18 @@
     <body>
     {% block navigation %}
     <nav class="navbar">
-            <a class="navbar-brand" href="{{ url_for('index') }}">
-      <img src="{{url_for('static', filename='images/paw.jpg') }}" width="38" height="29">
-    </a>
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+            <img src="{{url_for('static', filename='images/paw.jpg') }}" width="38" height="29">
+        </a>
+        {% if current_page != 'index' %}
+        <h5>Refresh the page to cheat and get another {{current_page}} of the day!</h5>
+        <p></p>
+        {% endif %}
 </nav>
     {% endblock %}
+
+
+
         {% block content %}{% endblock %}
 
         {% block scripts %}
