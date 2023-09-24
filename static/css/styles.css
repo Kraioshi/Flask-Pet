@@ -9,3 +9,15 @@
 .doggo {
     width: 150px;
 }
+
+.shiba-image {
+    max-width: fit-content(20em);
+}
+
+.cat-image {
+    max-width: fit-content(20em)
+}
+
+.dog-image {
+    max-width: fit-content(20em)
+}
