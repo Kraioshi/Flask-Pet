@@ -1,7 +1,40 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="shiba">
+    <a href="#" style="text-decoration:none" target="_blank">
+        <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle
+                 border border-primary-subtle rounded-pill">
+        <img class="rounded-circle me-1" width="36px" height="24"
+             src="{{ url_for('static', filename='images/shiba.png') }}" alt="shiba" >
+        Shiba of the day
+        </span>
+    </a>
+</div>
+<br class="break">
 
+<div class="catto">
+       <a href="#" style="text-decoration:none" target="_blank">
+        <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle
+                 border border-primary-subtle rounded-pill">
+        <img class="rounded-circle me-1" width="36px" height="24"
+             src="{{ url_for('static', filename='images/cat.png') }}" alt="Catto">
+        Catto of the day
+        </span>
+    </a>
+</div>
+<br>
+
+<div class="doggo">
+    <a href="#" style="text-decoration:none" target="_blank">
+        <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle
+                 border border-primary-subtle rounded-pill">
+        <img class="rounded-circle me-1" width="36px" height="24"
+             src="{{ url_for('static', filename='images/dog.png') }}" alt="doggo">
+        Doggo of the day
+        </span>
+    </a>
+</div>
 
 
 {% endblock %}
