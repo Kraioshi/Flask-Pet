@@ -24,6 +24,7 @@ dog_headers = {
 
 
 @app.route('/')
+@app.route('/index')
 def index():
     current_page = 'index'
     return render_template('index.html', current_page=current_page)
