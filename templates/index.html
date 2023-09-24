@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="shiba">
-    <a href="#" style="text-decoration:none" target="_blank">
+    <a href="{{url_for('shiba')}}" style="text-decoration:none" target="_blank">
         <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle
                  border border-primary-subtle rounded-pill">
         <img class="rounded-circle me-1" width="36px" height="24"
@@ -14,7 +14,7 @@
 <br class="break">
 
 <div class="catto">
-       <a href="#" style="text-decoration:none" target="_blank">
+       <a href="{{ url_for('cat') }}" style="text-decoration:none" target="_blank">
         <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle
                  border border-primary-subtle rounded-pill">
         <img class="rounded-circle me-1" width="36px" height="24"
@@ -26,7 +26,7 @@
 <br>
 
 <div class="doggo">
-    <a href="#" style="text-decoration:none" target="_blank">
+    <a href="dog" style="text-decoration:none" target="_blank">
         <span class="badge d-flex align-items-center p-1 pe-2 text-primary-emphasis bg-primary-subtle
                  border border-primary-subtle rounded-pill">
         <img class="rounded-circle me-1" width="36px" height="24"
