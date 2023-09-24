@@ -19,6 +19,13 @@
 
     </head>
     <body>
+    {% block navigation %}
+    <nav class="navbar">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+      <img src="{{url_for('static', filename='images/paw.jpg') }}" width="38" height="29">
+    </a>
+</nav>
+    {% endblock %}
         {% block content %}{% endblock %}
 
         {% block scripts %}
