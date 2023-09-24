@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block title %} Dog Of The Day {% endblock %}
+
+
 {% block content %}
-  <img src="{{ dog_image }}">
-{% endblock %}
+  <div class="container" style="display: flex; justify-content: center;">
+      <img class="dog-image" src="{{ dog_image }}">
+  </div>{% endblock %}

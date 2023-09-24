@@ -25,7 +25,7 @@
             <img src="{{url_for('static', filename='images/paw.jpg') }}" width="38" height="29">
         </a>
         {% if current_page != 'index' %}
-        <h5 style="position:absolute; right: 485px;">Refresh the page to cheat and get another {{current_page}} of the day!</h5>
+        <h5 style="position:absolute; right: 485px; color:red; opacity: 70%;">Refresh the page to cheat and get another {{current_page}} of the day!</h5>
         {% endif %}
 </nav>
     {% endblock %}
