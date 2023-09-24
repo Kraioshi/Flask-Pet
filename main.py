@@ -10,9 +10,9 @@ load_dotenv()
 
 cat_api_key = os.getenv('CAT')
 dog_api_key = os.getenv('DOG')
-cat_url = 'https://api.thecatapi.com/v1/images/search'
-dog_url = 'https://api.thedogapi.com/v1/images/search'
-shiba_url = 'http://shibe.online/api/shibes?count=[1]&urls=[true]&httpsUrls=[true]'
+cat_url = os.getenv('CAT_URL')
+dog_url = os.getenv('DOG_URL')
+shiba_url = os.getenv('SHIBA_URL')
 
 cat_headers = {
     'Authorization': f'Bearer {cat_api_key}',
