@@ -7,12 +7,19 @@ app = Flask(__name__)
 
 load_dotenv()
 
-cat_key = os.getenv('CAT')
+api_key = os.getenv('CAT')
+url = 'https://api.thecatapi.com/v1/images/search'
+
+headers = {
+    'Authorization': f'Bearer {api_key}',
+}
 
 
 @app.route('/')
 def index():
-    return render_template('cat.html')
+    response = requests.get(url, headers=headers).json()
+    cat_url = response[0]['url']
+    return render_template('cat.html', cat_url=cat_url)
 
 
 if __name__ == '__main__':
